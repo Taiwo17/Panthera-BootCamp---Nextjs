@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <div className='px-8 mb-8 md:px-12 lg:px-32'>
-      <div className='flex flex-col py-8 lg:flex-row md:justify-between md:items-center'>
+      <div className='flex flex-col py-8 lg:flex-row md:justify-between'>
         <div className='pb-8'>
           <img src='../images/logo_footer.png' alt='' />
         </div>
