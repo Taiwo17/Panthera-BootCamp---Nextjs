@@ -297,12 +297,12 @@ export default function Home() {
             {people.map((person) => {
               return <Slider key={person.id} {...person} />
             })}
-            {/* <Slider
+            <Slider
               desc={`Helped me with my request, gave me advice through a new person's
           perspective regarding my coding style and was very helpful!`}
               img={'../images/testOne.png'}
               name={'Joey Leonardi'}
-            /> */}
+            />
             {/* <Slider
               desc={`Helped me with my request, gave me advice through a new person's
           perspective regarding my coding style and was very helpful!`}
