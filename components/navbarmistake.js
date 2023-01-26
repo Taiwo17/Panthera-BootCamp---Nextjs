@@ -10,7 +10,7 @@ function Navbar() {
   const inActiveLink = 'text-vendiitPrimary font-sora opacity-60 text-base'
 
   return (
-    <nav className='fixed -z-1 w-full flex flex-wrap items-center justify-between px-6 py-4 bg-[#ffffff] lg:h-[104px] lg:px-28 xl:px-32'>
+    <nav className='fixed w-full flex flex-wrap items-center justify-between px-6 py-4 h-[100px]  lg:h-[104px] lg:px-28 xl:px-32'>
       <div className='container flex flex-wrap items-center justify-between'>
         <div className='w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
           <Link className='inline-block mr-4 py-2' href={'/'}>
@@ -69,27 +69,17 @@ function Navbar() {
               </li>
             </Link>
             <Link href={'/courses'}>
-              <li
-                className={
-                  currentLink === `/courses` ? activeLink : inActiveLink
-                }
-              >
+              <li className={currentLink === `/` ? activeLink : inActiveLink}>
                 Courses
               </li>
             </Link>
-            <Link href={'/landing-page'}>
-              <li
-                className={
-                  currentLink === `/landing-page` ? activeLink : inActiveLink
-                }
-              >
+            <Link href={'/schedule'}>
+              <li className={currentLink === `/` ? activeLink : inActiveLink}>
                 Schedule
               </li>
             </Link>
             <Link href={'/faq'}>
-              <li
-                className={currentLink === `/faq` ? activeLink : inActiveLink}
-              >
+              <li className={currentLink === `/` ? activeLink : inActiveLink}>
                 FAQ
               </li>
             </Link>

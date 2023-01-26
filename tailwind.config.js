@@ -15,9 +15,15 @@ module.exports = {
       colors: {
         vendiitPrimary: '#184CD1',
       },
+      backgroundImage: {
+        hero: "url('/public/images/hero.png')",
+      },
       lineHeight: {
+        24: '24px',
+        32: '32px',
         110: '110%',
         140: '140%',
+        126: '126.5%',
       },
     },
   },

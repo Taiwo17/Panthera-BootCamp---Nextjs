@@ -13,32 +13,6 @@ import Footer from '@/components/Footer'
 
 export default function Home() {
   const [people, setPeople] = useState(testimonial)
-  const [index, setIndex] = useState(0)
-
-  function nextSlide() {
-    setIndex((oldIndex) => {
-      let index = oldIndex + 1
-      index > people.length - 1 ? (index = 0) : index
-    })
-  }
-  function prevSlide() {
-    setIndex((oldIndex) => {
-      let index = oldIndex - 1
-      index < people.length - 1 ? (index = 0) : index
-    })
-  }
-
-  useEffect(() => {
-    let slider = setInterval(() => {
-      setIndex((oldIndex) => {
-        let index = oldIndex + 1
-        index > people.length - 1 ? (index = 0) : index
-      })
-    }, 5000)
-    return () => {
-      clearInterval(slider)
-    }
-  }, [index])
 
   return (
     <>
@@ -50,7 +24,16 @@ export default function Home() {
       </Head>
       <main>
         <Navbar />
-        <HeroSection />
+        <HeroSection
+          backgroundColor={'#184CD1'}
+          backgroundImage={'../images/hero.png'}
+          title={'Go from a total beginner to expert in 4 months'}
+          tech={'Panthera Tech Bootcamp'}
+          desc={
+            'Learn coding and tech Skills to become proficient with a full real life project to show in your portfolio.'
+          }
+          btnTitle={'Start Learning'}
+        />
         <div className='bg-[#E8EEFC] h-auto mx-8 mt-[-100px] mb-32 rounded-2xl px-8 md:px-12 lg:mx-32'>
           <div className='flex flex-col gap-8 py-8 md:flex-row'>
             <div className=''>
@@ -279,10 +262,7 @@ export default function Home() {
                 us.
               </p>
               <div className='flex items-center  gap-4'>
-                <button
-                  onClick={prevSlide}
-                  className='border border-white rounded-lg p-3'
-                >
+                <button className='border border-white rounded-lg p-3'>
                   <svg
                     width='32'
                     height='32'
@@ -296,10 +276,7 @@ export default function Home() {
                     />
                   </svg>
                 </button>
-                <button
-                  onClick={nextSlide}
-                  className='bg-[#A4BAF4] border border-[#184CD1] rounded-lg p-3'
-                >
+                <button className='bg-[#A4BAF4] border border-[#184CD1] rounded-lg p-3'>
                   <svg
                     width='32'
                     height='32'
@@ -317,18 +294,8 @@ export default function Home() {
             </div>
           </div>
           <div className={`flex flex-col justify-between gap-8 md:flex-row`}>
-            {people.map((person, personIndex) => {
-              let position = 'nextSlide'
-              if (personIndex === index) {
-                position = 'activeSlide'
-              }
-              if (
-                personIndex === index - 1 ||
-                (index === 0 && personIndex === people.length - 1)
-              ) {
-                position = 'lastSlide'
-              }
-              return <Slider key={person.id} {...person} position={position} />
+            {people.map((person) => {
+              return <Slider key={person.id} {...person} />
             })}
             {/* <Slider
               desc={`Helped me with my request, gave me advice through a new person's
