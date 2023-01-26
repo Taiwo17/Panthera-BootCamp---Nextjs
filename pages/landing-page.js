@@ -3,6 +3,7 @@ import ClassType from "@/components/ClassType";
 import Lang from "@/components/Lang";
 import Slider from "@/components/Slider";
 import Link from "next/link";
+import Head from "next/head";
 import questions from "@/questions";
 import React from "react";
 import Schedule from "@/components/Schedule";
