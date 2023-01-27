@@ -77,10 +77,10 @@ function Navbar() {
                 Courses
               </li>
             </Link>
-            <Link href={'/landing-page'}>
+            <Link href={'/schedule'}>
               <li
                 className={
-                  currentLink === `/landing-page` ? activeLink : inActiveLink
+                  currentLink === `/schedule` ? activeLink : inActiveLink
                 }
               >
                 Schedule

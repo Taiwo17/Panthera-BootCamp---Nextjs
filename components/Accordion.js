@@ -11,7 +11,7 @@ function Accordion({ title, info }) {
         </h3>
 
         <button
-          className='bg-[#E8EEFC] rounded p-2'
+          className='bg-[#E8EEFC] rounded p-1'
           onClick={() => setShowInfo(!showInfo)}
         >
           {showInfo ? (

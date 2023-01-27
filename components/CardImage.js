@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 function CardImage({
   img,
@@ -44,12 +45,18 @@ function CardImage({
             </p>
           </div>
           <div className='flex justify-between items-center'>
-            <button className='bg-[#66D540] border text-black border-[#4EB729] rounded-lg px-6 py-3 font-clashDisplay'>
+            <Link
+              href={'/landing-page'}
+              className='inline-block bg-[#66D540] border text-black border-[#4EB729] rounded-lg px-6 py-3 font-clashDisplay'
+            >
               {btn}
-            </button>
-            <button className='bg-white border border-[#184CD1] text-[#184CD1] rounded-lg px-6 py-3 font-clashDisplay'>
+            </Link>
+            <Link
+              href={'/landing-page'}
+              className='bg-white border border-[#184CD1] text-[#184CD1] rounded-lg px-6 py-3 font-clashDisplay'
+            >
               {btnOne}
-            </button>
+            </Link>
           </div>
         </div>
       </div>
